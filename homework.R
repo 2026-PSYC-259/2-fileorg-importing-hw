@@ -22,23 +22,14 @@
 
 ### QUESTION 2 ----- 
 
-# Read in the data for 6191_1.txt and store it to a variable called ds1
+# Read in the data for 6191_1.txt using here()
+# Hint 1: use getwd first to check working directory
+# Hint 2: make sure you're letting R know about the data_A subfolder
+# Hint 3: nest the readr and here() functions 
+# Store it to an object called ds1
 # Ignore the header information, and just import the 20 trials
 # Be sure to look at the format of the file to determine what read_* function to use
 # And what arguments might be needed
-
-# ds1 should look like this:
-
-# # A tibble: 20 × 4
-#  trial_num    speed_actual speed_response correct
-#   <dbl>       <chr>        <chr>          <lgl>  
-#     1          fas          slower         FALSE  
-#     2          fas          faster         TRUE   
-#     3          fas          faster         TRUE   
-#     4          fas          slower         FALSE  
-#     5          fas          faster         TRUE   
-#     6          slo          slower         TRUE
-# etc..
 
 # A list of column names are provided to use:
 
@@ -46,13 +37,19 @@ col_names  <-  c("trial_num","speed_actual","speed_response","correct")
 
 # ANSWER
 
-
-
-### QUESTION 3 ----- 
+### QUESTION 3a. ----- 
 
 # For some reason, the trial numbers for this experiment should start at 100
 # Create a new column in ds1 that takes trial_num and adds 100
-# Then write the new data to a CSV file in the "data_cleaned" folder
+
+# ANSWER
+
+
+### QUESTION 3b. ----- 
+# Write the new data from question 3a to a CSV file in the "data_A_cleaned" folder
+# Make sure to include code to create a "data_A_cleaned" folder if it doesn't already exist
+# Choose a naming convention for this new dataset (ex. snake_case, no spaces, a date or version prefix/suffix)
+# Add one commend explaining your naming choice
 
 # ANSWER
 
@@ -87,7 +84,7 @@ col_names  <-  c("trial_num","speed_actual","speed_response","correct")
 
 ### QUESTION 7 -----
 
-# Now that the column type problem is fixed, take a look at ds
+# Now that the column type problem is fixed, take a look at ds()
 # We're missing some important information (which participant/block each set of trials comes from)
 # Read the help file for read_tsv to use the "id" argument to capture that information in the file
 # Re-import the data so that filename becomes a column
