@@ -24,7 +24,7 @@
 
 # Read in the data for 6191_1.txt using here()
 # Hint 1: use getwd first to check working directory
-# Hint 2: make sure you're letting R know about the data_A subfolder
+# Hint 2: make sure you let R know about the data_A subfolder
 # Hint 3: nest the readr and here() functions 
 # Store it to an object called ds1
 # Ignore the header information, and just import the 20 trials
